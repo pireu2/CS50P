@@ -24,9 +24,6 @@ def main():
                 year = int(string[2])
                 day = int(string[1])
                 month = int(string[0])
-                if 0 <= day <= 31 and 0 <= month <= 12:
-                    print(f"{year}-{month:02d}-{day:02d}")
-                    break
             except ValueError:
                 continue
         else:
@@ -39,11 +36,11 @@ def main():
                     year = int(string[2])
                     day = int(string[1])
                     month = months.index(string[0]) + 1
-                    if 0 <= day <= 31 and 0 <= month <= 12:
-                        print(f"{year}-{month:02d}-{day:02d}")
-                        break
                 except ValueError:
                     continue
+        if 0 <= day <= 31 and 0 <= month <= 12:
+            print(f"{year}-{month:02d}-{day:02d}")
+            break
 
 
 main()
